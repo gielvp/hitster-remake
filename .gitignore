@@ -1,0 +1,12 @@
+# OS
+.DS_Store
+
+# Editor
+.vscode/
+
+# Node (later)
+node_modules/
+
+# Laravel (later)
+.env
+vendor/
