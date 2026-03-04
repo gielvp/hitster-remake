@@ -4,26 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hitster</title>
-     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css">
     <!-- Vue.js CDN -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <div id="app">
-        <home-screen v-if="screen === 'home'" @start="screen = 'game'"></home-screen>
-        <game-screen v-if="screen === 'game'"></game-screen>
+    <div id="app"></div>
 
-
-        <h1>{{ title }}</h1>
-        <h2>{{ description }}</h2>
-        <button class="start-btn" @click="$emit('start')">{{ startButton }}</button>
-        <p>{{ footerText }}</p>
-    </div>
-
-
-
-    
-     <!-- Main JavaScript File -->
+    <!-- Main JavaScript File -->
     <script src="./main.js"></script>
 </body>
 </html>
