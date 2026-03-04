@@ -17,21 +17,9 @@ const homeScreen = {
     }
 };
 
-const gameScreen = {
-    template: `
-    <div class="game-screen">
-        <h1>Game Screen</h1>
-        <p>Game content goes here...</p>
-        <button @click="$emit('back')">← Back</button>
-    </div>`,
-    emits: ['back']
-};
-
 const app = Vue.createApp({
     data() {
-        return {
-            screen: 'home'
-        };
+        return { screen: 'home' };
     },
     template: `
         <home-screen v-if="screen === 'home'" @start="screen = 'game'"></home-screen>
@@ -42,4 +30,4 @@ const app = Vue.createApp({
 app.component('home-screen', homeScreen);
 app.component('game-screen', gameScreen);
 
-const mountedApp = app.mount('#app');
+app.mount('#app');
